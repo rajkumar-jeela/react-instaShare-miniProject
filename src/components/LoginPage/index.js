@@ -4,7 +4,7 @@ import Cookies from 'js-cookie'
 
 import './index.css'
 
-class LoginForm extends Component {
+class LoginPage extends Component {
   state = {
     username: '',
     password: '',
@@ -18,7 +18,7 @@ class LoginForm extends Component {
     Cookies.set('jwt_token', jwtToken, {
       expires: 30,
     })
-    // FIX1: history.replace should be used to navigate to the Home Route here
+
     history.replace('/')
   }
 
@@ -122,4 +122,4 @@ class LoginForm extends Component {
   }
 }
 
-export default LoginForm
+export default LoginPage
